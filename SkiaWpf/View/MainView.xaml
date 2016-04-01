@@ -7,12 +7,15 @@
              d:DesignHeight="300" d:DesignWidth="300"
              DataContext="{Binding MainViewModel, Source={StaticResource Locator}}">
   <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
     <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" />
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
 
-    <Label Content="{Binding Name}" />
-    <Image Grid.Row="1" Source="{Binding ImageSource}" />
+    <Image Grid.Row="1" Source="{Binding ImageSource}"
+           Stretch="Fill" StretchDirection="Both" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+           />
   </Grid>
 </UserControl>

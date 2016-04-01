@@ -5,9 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SkiaWpf"
         xmlns:v="clr-namespace:SkiaWpf.View"
+        Width="900"
+        Height="600"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" >
   <Grid>
-    <v:MainView />
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <v:MainView HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
   </Grid>
 </Window>

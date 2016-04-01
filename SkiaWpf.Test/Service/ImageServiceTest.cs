@@ -26,14 +26,14 @@ namespace SkiaWpf.Test.Service
     [TestMethod]
     public void ImageServiceTest_CreateImage()
     {
-      var image = GetService().CreateImage(800, 600);
+      var image = GetService().CreateImage(900, 600);
     }
 
     [TestMethod]
     public void ImageServiceTest_RenderImage()
     {
       var service = GetService();
-      var image = service.CreateImage(800, 600);
+      var image = service.CreateImage(900, 600);
       service.UpdateImage(image);
     }
   }

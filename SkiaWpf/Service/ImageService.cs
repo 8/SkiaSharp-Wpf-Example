@@ -49,15 +49,15 @@ namespace SkiaWpf.Service
       {
         SKCanvas canvas = surface.Canvas;
 
+        int x = 30;
         var paint = new SKPaint() { Color = new SKColor(0, 0, 0), TextSize = 100 };
         canvas.Clear(new SKColor(130, 130, 130));
-        canvas.DrawText("SkiaSharp on Wpf!", 50, 200, paint);
+        canvas.DrawText("SkiaSharp on Wpf!", x, 200, paint);
         if (this.Call == 0)
           this.Stopwatch.Start();
         double fps = this.Call / ((this.Stopwatch.Elapsed.TotalSeconds != 0) ? this.Stopwatch.Elapsed.TotalSeconds : 1);
-        canvas.DrawText($"FPS: {fps:0}", 50, 300, paint);
-        canvas.DrawText($"Frames: {this.Call++}", 50, 400, paint);
-
+        canvas.DrawText($"FPS: {fps:0}", x, 300, paint);
+        canvas.DrawText($"Frames: {this.Call++}", x, 400, paint);
       }
 
       writeableBitmap.AddDirtyRect(new Int32Rect(0, 0, width, height));
